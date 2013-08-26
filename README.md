@@ -1,5 +1,5 @@
-fmlauncher
-==========
+Launcher
+========
 
 Appscript/py2app demo that allows delayed start of other applications and documents.
 
