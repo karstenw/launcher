@@ -23,7 +23,3 @@ der EINEN text Parameter übergibt:
 
 
 Siehe beigefügtes AppleScript "test_launchwithdelay"
-
-
-In FileMaker ist der Aufruf wie in der Beispieldatei durchzuführen.
-
