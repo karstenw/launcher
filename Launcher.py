@@ -23,7 +23,7 @@ import pdb
 import pprint
 pp = pprint.pprint
 
-kwdbg = False
+kwdbg = True
 
 def waitAndLaunch(params):
 
@@ -32,25 +32,31 @@ def waitAndLaunch(params):
     else:
         path, doc, seconds = params.split(u'\n', 2)
 
-    # pp(params)
+    if kwdbg:
+        pp(params)
 
     try:
         seconds = float( seconds )
     except Exception, err:
         print
         print err
-        seconds = 60.0
-    time.sleep( seconds )
-    apppath = mt.File( path )
+        seconds = 0.0
+    if seconds:
+        time.sleep( seconds )
 
-    a = mt.File( doc )
+    docpath = mt.File( doc )
 
-    fmp = app( path )
-    # fmp.launch()
-    fmp.run()
-    fmp.activate()
-    time.sleep( 3 )
-    fmp.open( a.alias )
+    if os.path.exists( path ):
+        fmp = app( path )
+        # fmp.launch()
+        fmp.run()
+        fmp.activate()
+        time.sleep( 3 )
+        if os.path.exists( doc ):
+            fmp.open( docpath.alias )
+    else:
+        finder = app("Finder.app")
+        finder.open( docpath.alias )
 
 def openapp():
     app("").activate()
