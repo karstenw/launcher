@@ -15,7 +15,7 @@ mv ./dist/Launcher.app ./Launcher_v000/
 
 # markdown README.md >README.html
 markdown_py -o html5 -f README.html README.md
-cp README.html  ./Launcher_v000/
+mv README.html  ./Launcher_v000/
 
 
 # finally re-create the development version

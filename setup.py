@@ -5,11 +5,14 @@ import os
 
 #######
 
-name = 'Launcher'
-version = '0.1.1'
-url = 'org.kw.Launcher'
+import LauncherVersion
 
-creator = 'KWFL'
+name = LauncherVersion.name
+version = LauncherVersion.version
+bundle = LauncherVersion.bundle
+creator = LauncherVersion.creator
+shortCopyright = LauncherVersion.shortCopyright
+longCopyright = LauncherVersion.longCopyright
 
 # set to False during development so that application is visible while running;
 # set to True for deployment
@@ -43,7 +46,7 @@ setup(
 			'plist': Plist(
 				LSUIElement=int(hide),
 				NSAppleScriptEnabled = True,
-				CFBundleIdentifier = url,
+				CFBundleIdentifier = bundle,
                 CFBundleName = name,
                 CFBundleDisplayName = name,
 				CFBundleVersion = version,
@@ -51,8 +54,8 @@ setup(
                 CFBundleSignature = creator,
                 CFBundlePackageType = "APPL",
 				CFBundleIconFile = name + '.icns',
-                NSHumanReadableCopyright = u'Copyright 2008-2013 Karsten Wolf',
-                CFBundleGetInfoString = u'Launcher Application ' + version + ' Copyright 2008-2013 Karsten Wolf'
+                NSHumanReadableCopyright = shortCopyright,
+                CFBundleGetInfoString = longCopyright
 			),
             'iconfile': './+icons/appicon.icns',
 			'resources': [name + '.rsrc', './+icons/appicon.icns']

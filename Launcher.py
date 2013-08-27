@@ -19,11 +19,13 @@ import Carbon.CarbonEvt
 RunApplicationEventLoop = Carbon.CarbonEvt.RunApplicationEventLoop
 QuitApplicationEventLoop = Carbon.CarbonEvt.QuitApplicationEventLoop
 
-import pdb
 import pprint
 pp = pprint.pprint
 
 kwdbg = True
+
+# import pdb
+
 
 def waitAndLaunch(params):
 
