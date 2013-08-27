@@ -1,25 +1,42 @@
 Launcher
 ========
 
-Appscript/py2app demo that allows delayed start of other applications and documents.
+Appscript/py2app demo that allows time delayed start of other applications and documents.
 
+
+## Download ##
 Downloads at my dropbox: http://goo.gl/PXJwFw
 
-Kurzbeschreibung:
 
-Launcher in den Programme Ordner kopieren
+## Compiling ##
 
-Das Programm realisiert einen AppleScript Befehl:
+#### Prerequisites for compiling: ####
+
+
++ Apple developer tools
++ python 2.7 - older versions may work
++ py2app
++ appscript
+
+
+Please do not use the system python. Download the latest 2.7 32-bit version at python.org.
+
+
+## Short description ##
+
+
+Copy the downloaded app to the Applications folder
+
+The app implements one AppleScript command: 
 
 - launchAppWithDelay
 
-der EINEN text Parameter übergibt:
+which has one text parameter which consists of 3 lines:
 
-1. Zeile: Unix Pfad zu dem zu startenden Programm
+1. line: Unix path to an application
 
-2. Zeile: Unix Pfad zu dem von Zeile 1 angegebenen Program zu öffnenden Dokument
+2. line: Unix path to a document to be opened by the ap from path 1
 
-3. Zeile: Wartezeit in Sekunden
+3. line: Delay in seconds.
 
-
-Siehe beigefügtes AppleScript "test_launchwithdelay"
+Have a look at the accompanied AppleScript "test_launchwithdelay". The initial use was for a FileMaker forum where the task was to restart the database.
