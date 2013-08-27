@@ -18,4 +18,11 @@ markdown_py -o html5 -f README.html README.md
 cp README.html  ./Launcher_v000/
 
 
+# finally re-create the development version
+
+rm -Rf ./build/*
+rm -Rf ./dist/*
+
+/usr/bin/env python setup.py py2app -A
+
 
