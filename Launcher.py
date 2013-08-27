@@ -32,15 +32,18 @@ def waitAndLaunch(params):
     else:
         path, doc, seconds = params.split(u'\n', 2)
 
-    if kwdbg:
-        pp(params)
-
     try:
         seconds = float( seconds )
     except Exception, err:
         print
         print err
         seconds = 0.0
+
+    if kwdbg:
+        print "APP:", repr( path )
+        print "DOC:", repr( doc )
+        print "DELAY:", repr( seconds )
+
     if seconds:
         time.sleep( seconds )
 
@@ -51,7 +54,7 @@ def waitAndLaunch(params):
         # fmp.launch()
         fmp.run()
         fmp.activate()
-        time.sleep( 3 )
+        # time.sleep( 3 )
         if os.path.exists( doc ):
             fmp.open( docpath.alias )
     else:
