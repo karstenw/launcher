@@ -59,3 +59,8 @@ Substitute( Get ( FilePath ); "file:"; "/Volumes")  &"¶" &
 /* time to wait */
 "4.0"
 ```
+
+And the "Send Event" call should be configured with:
+Event Class: KWFL
+Event ID: LAWD
+
