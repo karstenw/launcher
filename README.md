@@ -3,6 +3,8 @@ Launcher
 
 Appscript/py2app demo that allows time delayed start of other applications and documents.
 
+This originated long ago from the "MiniTC" demo that used to be part of an appscript tutorial (v0.18.1)
+
 
 ## Download ##
 Downloads at my dropbox: http://goo.gl/PXJwFw
