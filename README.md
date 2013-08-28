@@ -39,4 +39,23 @@ which has one text parameter which consists of 3 lines:
 
 3. line: Delay in seconds.
 
-Have a look at the accompanied AppleScript "test_launchwithdelay". The initial use was for a FileMaker forum where the task was to restart the database.
+Have a look at the accompanied AppleScript "test_launchwithdelay". The initial use was for a FileMaker forum where the task was to restart the database after a specified
+amount of time.
+
+When using this from FileMaker to restart itself, the parameter can be calculated
+with this:
+
+```
+/* posix application path */
+"/Volumes"
+& Get ( FileMakerPath )
+& If (PatternCount( Get ( ApplicationVersion ); "Advanced")>0 ;
+    "Filemaker Pro Advanced.app¶";
+    "Filemaker Pro.app¶") &
+
+/* posix document path */
+Substitute( Get ( FilePath ); "file:"; "/Volumes")  &"¶" &
+
+/* time to wait */
+"4.0"
+```
