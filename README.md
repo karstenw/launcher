@@ -61,6 +61,6 @@ Substitute( Get ( FilePath ); "file:"; "/Volumes")  &"¶" &
 ```
 
 And the "Send Event" call should be configured with:
-Event Class: KWFL
-Event ID: LAWD
++ Event Class: KWFL
++ Event ID: LAWD
 
