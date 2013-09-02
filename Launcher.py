@@ -45,8 +45,10 @@ def waitAndLaunch(params):
     """
 
     # determine line endings
+    returnEndings = False
     if u'\r' in params:
         path, doc, seconds = params.split(u'\r', 2)
+        returnEndings = True
     else:
         path, doc, seconds = params.split(u'\n', 2)
 
@@ -63,6 +65,8 @@ def waitAndLaunch(params):
         print "APP:", repr( path )
         print "DOC:", repr( doc )
         print "DELAY:", repr( seconds )
+        print "returnEndings:", repr( returnEndings )
+        
 
     # wait if there was a valid parameter
     if seconds:
@@ -93,7 +97,7 @@ installeventhandler(lambda:QuitApplicationEventLoop(), 'aevtquit')
 installeventhandler(
     waitAndLaunch,
     'KWFLLAWD',
-    ('----', 'params', kAE.typeUnicodeText) )
+    ('----', 'params', kAE.typeUnicodeText))
 
 
 if __name__ == '__main__':

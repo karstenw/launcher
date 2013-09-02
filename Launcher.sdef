@@ -3,7 +3,7 @@
 <dictionary title="Launcher Scripting Terminology">
 	<suite name="Some Launch Helper" code="KWFL">
 		<command name="launchAppWithDelay" code="KWFLLAWD" description="Launch application at path with delay in seconds.">
-			<direct-parameter description="pathToapp, secondsToDelay" type="text"/>
+			<direct-parameter type="text"/>
 		</command>
 	</suite>
 </dictionary>

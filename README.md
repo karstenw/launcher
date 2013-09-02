@@ -3,7 +3,7 @@ Launcher
 
 Appscript/py2app demo that allows time delayed start of other applications and documents.
 
-This originated long ago from the "MiniTC" demo that used to be part of an appscript tutorial (v0.18.1)
+This originated a long time ago from the "MiniTC" demo that used to be part of some appscript tutorial (v0.18.1)
 
 
 ## Download ##
@@ -20,8 +20,12 @@ Downloads at my dropbox: http://goo.gl/PXJwFw
 + py2app
 + appscript
 
+```
+python setup.py py2app
+```
 
-Please do not use the system python. Download the latest 2.7 32-bit version at python.org.
+
+Please do not use the system python since this app is 32-bit only due to Carbon dependencies. Download and use the latest 2.7 32-bit version at python.org.
 
 
 ## Short description ##
