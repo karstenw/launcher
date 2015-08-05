@@ -4,7 +4,7 @@ import datetime
 year = datetime.datetime.now().year
 
 name = 'Launcher'
-version = '0.1.1'
+version = '0.1.2'
 bundle = 'org.kw.Launcher'
 
 creator = 'KWFL'
